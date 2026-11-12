@@ -1,4 +1,4 @@
-# Logs
+﻿# Logs
 logs
 *.log
 npm-debug.log*
@@ -28,3 +28,9 @@ dist-ssr
 
 # Confidential previews: never commit local project data or assets
 .private/
+
+# Environment files and credentials
+.env
+.env.*
+*.pem
+*.key

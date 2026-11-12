@@ -45,7 +45,11 @@ La aplicación ya no depende de módulos virtuales ni de `.private/`. Funciona i
 
 `vite.config.ts` usa `base: './'` para generar rutas relativas compatibles con Pages tanto en un dominio de usuario como en una subruta. La navegación usa anclas y no requiere reescritura de rutas. El resultado estático está en `dist/`.
 
-No se configuró despliegue automático ni se hizo push o despliegue. Para revisar la versión final, compila y ejecuta `npm run preview`; usa la URL que indique Vite.
+El workflow `.github/workflows/deploy.yml` se ejecuta con cada push a `main` y también manualmente con `workflow_dispatch`. Usa Node.js 22 y npm ci, ejecuta lint, build, las pruebas de proyectos y el control del artefacto público, y publica exclusivamente `dist/` mediante las acciones oficiales de GitHub Pages. No necesita secretos de despliegue personalizados.
+
+En GitHub, revisa Settings → Pages → Build and deployment → Source y selecciona GitHub Actions. En la pestaña Actions, abre Deploy portfolio to GitHub Pages y comprueba que los trabajos build y deploy terminen en verde. La URL prevista es https://andres-algarin.github.io/. También puedes usar Run workflow para ejecutar el despliegue manualmente.
+
+Para verificar antes de un push: npm run lint, npm run build, node --test scripts/projects.test.mjs y node scripts/check-public-artifact.mjs. Para revisar el resultado local, ejecuta npm run preview.
 
 ## Notas
 
