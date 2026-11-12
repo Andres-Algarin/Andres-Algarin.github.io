@@ -374,31 +374,37 @@ function App() {
           />
           <div className="experience">
             <div className="experience-date">
-              <span className="timeline-dot" /> MAY — NOV 2026
+              <span className="timeline-dot" aria-hidden="true" /> Mayo – Noviembre de 2026
               <p>Etapa práctica</p>
             </div>
             <article className="experience-detail">
               <div className="experience-title">
                 <div>
-                  <p className="eyebrow">TECNOPARQUE RIONEGRO · SENA</p>
-                  <h3>Desarrollo de software</h3>
+                  <p className="eyebrow">TecnoParque Rionegro – SENA</p>
+                  <h3>Desarrollo de software y apoyo técnico TIC</h3>
                 </div>
                 <span className="outline-badge">Práctica profesional</span>
               </div>
               <p>
-                Participación en el desarrollo de soluciones de software,
-                abordando necesidades técnicas desde los requerimientos hasta su
-                implementación.
+                Durante mi etapa práctica participé en el desarrollo de soluciones
+                tecnológicas, colaborando con el equipo TIC y acompañando a talentos
+                y emprendedores en la identificación de necesidades, definición de
+                requerimientos y desarrollo de sus proyectos.
               </p>
-              <ul>
+              <h4 className="experience-responsibilities-heading" id="responsabilidades-practica">
+                Responsabilidades
+              </h4>
+              <ul aria-labelledby="responsabilidades-practica">
                 {[
                   "Desarrollo de aplicaciones web y de escritorio desde cero.",
-                  "Levantamiento y análisis de requerimientos funcionales.",
-                  "Implementación de APIs REST e integración de bases de datos.",
-                  "Resolución de problemas técnicos durante el desarrollo.",
+                  "Levantamiento y análisis de requerimientos mediante reuniones con talentos y usuarios.",
+                  "Asesoría y acompañamiento técnico a talentos en sus proyectos de software.",
+                  "Trabajo colaborativo con el equipo TIC y otros desarrolladores.",
+                  "Participación en reuniones, actividades de divulgación y espacios de intercambio tecnológico.",
+                  "Implementación de APIs REST, integración de bases de datos y resolución de problemas técnicos.",
                 ].map((text) => (
                   <li key={text}>
-                    <ArrowUpRight size={16} />
+                    <ArrowUpRight size={16} aria-hidden="true" />
                     {text}
                   </li>
                 ))}
@@ -525,7 +531,7 @@ function App() {
         <a className="brand" href="#inicio">
           a<span className="accent">.</span>
         </a>
-        <p>© {currentYear} Andrés Felipe Algarín Cardona</p>
+        <p>© {currentYear} Andrés Felipe Algarín Cárdenas</p>
         <a href="#inicio">
           Volver arriba <ArrowUpRight size={15} />
         </a>
