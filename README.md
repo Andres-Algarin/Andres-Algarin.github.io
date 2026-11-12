@@ -51,6 +51,24 @@ En GitHub, revisa Settings → Pages → Build and deployment → Source y selec
 
 Para verificar antes de un push: npm run lint, npm run build, node --test scripts/projects.test.mjs y node scripts/check-public-artifact.mjs. Para revisar el resultado local, ejecuta npm run preview.
 
+## Evitar una pantalla blanca después del despliegue
+
+La fuente de Pages debe ser **GitHub Actions** (`build_type: workflow`). Publicar desde la raíz de main sirve el index.html de desarrollo, que contiene /src/main.tsx y %BASE_URL%, y puede sobrescribir el despliegue correcto de dist. No cambies Source a Deploy from a branch.
+
+El workflow publica exclusivamente dist y comprueba la fuente de Pages antes de desplegar. Después verifica el HTML público, los tipos MIME de JavaScript, CSS y favicon, y todas las imágenes de los proyectos. La prueba de regresión rechaza explícitamente un HTML de desarrollo.
+
+Puedes repetir las comprobaciones con:
+
+```sh
+npm run lint
+npm run build
+node --test scripts/projects.test.mjs
+node scripts/check-public-artifact.mjs
+node scripts/verify-public-site.mjs
+```
+
+El último comando comprueba la web pública y debe ejecutarse después de que finalice el despliegue. En el navegador, Network debe mostrar scripts desde assets/*.js con MIME JavaScript, estilos CSS y favicon.svg; nunca /src/main.tsx ni %BASE_URL%. Si conservas la pestaña abierta desde antes de la corrección, recarga con Ctrl+F5.
+
 ## Notas
 
 Las tipografías DM Sans y Manrope se cargan desde Google Fonts con alternativas de sistema. Los enlaces de correo, WhatsApp, Instagram, LinkedIn y perfil de GitHub abren sus destinos; no hay formulario ni backend en el portafolio. Los repositorios privados nunca se consultan ni exponen automáticamente.

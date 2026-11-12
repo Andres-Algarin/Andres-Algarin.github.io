@@ -1,4 +1,5 @@
-﻿import assert from "node:assert/strict";
+﻿import { inspectBuiltHtml } from "./site-assets.mjs";
+import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 const walk = (directory) =>
@@ -16,6 +17,11 @@ const walk = (directory) =>
     return entry.isDirectory() ? walk(file) : [file];
   });
 const files = walk("dist");
+const html = fs.readFileSync("dist/index.html", "utf8");
+for (const asset of inspectBuiltHtml(html)) {
+  const local = path.join("dist", asset.path.replace(/^(?:\.\/|\/)/, ""));
+  assert.ok(fs.existsSync(local), `Missing compiled asset: ${asset.path}`);
+}
 for (const file of files.filter((file) =>
   /\.(js|html|css|json|txt|md)$/i.test(file),
 )) {

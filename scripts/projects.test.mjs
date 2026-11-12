@@ -95,3 +95,19 @@ test("Production preview serves every approved image without private data", asyn
     await server.close();
   }
 });
+
+// A raw Vite document must never pass as a deployable artifact.
+test("Reject development HTML and validate compiled entry points", async () => {
+  const { inspectBuiltHtml } = await import("./site-assets.mjs");
+  assert.throws(() =>
+    inspectBuiltHtml(readFileSync(path.join(root, "index.html"), "utf8")),
+  );
+  const entries = inspectBuiltHtml(
+    readFileSync(path.join(root, "dist/index.html"), "utf8"),
+  );
+  assert.deepEqual(entries.map((entry) => entry.kind).sort(), [
+    "css",
+    "javascript",
+    "svg",
+  ]);
+});

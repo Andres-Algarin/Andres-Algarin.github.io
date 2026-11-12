@@ -37,6 +37,10 @@ jobs:
         run: node scripts/check-public-artifact.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Verify Pages publishing source
+        run: node scripts/check-pages-source.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Upload dist only
         uses: actions/upload-pages-artifact@v4
         with:
@@ -52,3 +56,13 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Checkout verification scripts
+        uses: actions/checkout@v4
+      - name: Set up Node.js 22 for verification
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify published HTML and asset MIME types
+        run: node scripts/verify-public-site.mjs
+        env:
+          PAGES_URL: ${{ steps.deployment.outputs.page_url }}
