@@ -1,4 +1,4 @@
-﻿import localProjects from "virtual:local-projects";
+﻿import additionalProjects from "./additional-projects.json";
 import projectImages from "./project-images.json";
 
 export type ProjectImage = {
@@ -21,7 +21,6 @@ export type Project = {
   contributionTitle?: string;
   noteTitle?: string;
   status?: string;
-  previewOnly?: boolean;
   features?: string[];
   architecture?: { title: string; description: string }[];
   technologyGroups?: { name: string; items: string[] }[];
@@ -49,7 +48,7 @@ const image = (
   height: projectImages[filename].height,
 });
 
-// Public use of the name, supplied screenshots and team repository link was
+// Public use of the name and supplied screenshots was
 // explicitly authorized by the portfolio owner in this conversation.
 const publicProjects: Project[] = [
   {
@@ -123,4 +122,17 @@ const publicProjects: Project[] = [
   },
 ];
 
-export const projects: Project[] = [...publicProjects, ...localProjects];
+const publicImage = (image: ProjectImage): ProjectImage => ({
+  ...image,
+  src: `${import.meta.env.BASE_URL}${image.src}`,
+  originalSrc: `${import.meta.env.BASE_URL}${image.originalSrc ?? image.src}`,
+});
+
+export const projects: Project[] = [
+  ...publicProjects,
+  ...additionalProjects.map((project) => ({
+    ...project,
+    cover: publicImage(project.cover),
+    gallery: project.gallery.map(publicImage),
+  })),
+];

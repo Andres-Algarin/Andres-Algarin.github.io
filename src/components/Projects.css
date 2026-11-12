@@ -391,14 +391,6 @@
     width: 100%;
   }
 }
-.project-preview-notice {
-  color: #bceacf !important;
-  font-size: 10px !important;
-  line-height: 1.7 !important;
-  margin: 0 0 16px !important;
-  border-left: 2px solid var(--green);
-  padding-left: 10px;
-}
 .project-status {
   padding: 13px 16px;
   border: 1px solid #345941;
@@ -442,4 +434,6 @@
 }
 
 /* Keep each showcase as a readable full-width case study. */
-.projects-grid:has(> .project-showcase) { grid-template-columns: 1fr; }
+.projects-grid:has(> .project-showcase) {
+  grid-template-columns: 1fr;
+}

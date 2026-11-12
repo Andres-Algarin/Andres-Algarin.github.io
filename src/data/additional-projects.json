@@ -1,0 +1,455 @@
+[
+  {
+    "id": "austral",
+    "title": "Austral",
+    "category": "Full Stack",
+    "collaborative": false,
+    "participationLabel": "Desarrollo individual",
+    "contributionTitle": "Mi participación como desarrollador Full Stack",
+    "noteTitle": "Desarrollo individual para un tercero",
+    "status": "Desarrollo funcional, pendiente de publicación en su dominio.",
+    "description": "Desarrollo individual de una plataforma de comercio electrónico con React, TypeScript y NestJS, integrando catálogo, carrito de compras, autenticación, gestión de pedidos, inventario y panel administrativo.",
+    "overview": "Plataforma web de comercio electrónico orientada a la venta de productos naturales para el cuidado capilar y de la piel. El sistema integra tienda virtual, catálogo de productos, carrito de compras, autenticación de usuarios y un panel administrativo para gestionar productos, pedidos e inventario.",
+    "objective": "Facilitar la exploración y compra de productos de cuidado capilar y de la piel, y centralizar la gestión del catálogo, los pedidos y las existencias en una plataforma web.",
+    "contributions": [
+      "Desarrollo individual del frontend y backend desde cero.",
+      "Integración de la base de datos mediante TypeORM.",
+      "Implementación del catálogo, carrito de compras y funcionalidades administrativas.",
+      "Implementación de autenticación de usuarios con JWT, Passport y bcrypt.",
+      "Integración del procesamiento de imágenes y envío de correos electrónicos.",
+      "Implementación de pruebas con Jest y Supertest."
+    ],
+    "features": [
+      "Tienda virtual y catálogo de productos.",
+      "Carrito de compras.",
+      "Autenticación de usuarios.",
+      "Panel administrativo para gestión de productos y pedidos.",
+      "Gestión de inventario."
+    ],
+    "collaborationNote": "Software desarrollado individualmente para su respectivo titular. Mi participación comprende la implementación completa de la solución; no me presento como propietario de los derechos del producto. El nombre, la descripción y las capturas se comparten con autorización. Las cuentas y datos de usuarios visibles son ficticios de prueba, según confirmación del titular del portafolio. Se omite la captura de Productos del panel administrativo a petición del usuario.",
+    "technologies": [
+      "React 19",
+      "TypeScript",
+      "NestJS 11",
+      "MySQL/MariaDB",
+      "TypeORM"
+    ],
+    "additionalTechnologies": [],
+    "architecture": [
+      {
+        "title": "Interfaz web",
+        "description": "React 19 y TypeScript, con React Router para navegación, Axios para comunicación con el backend, CSS3 y Vite."
+      },
+      {
+        "title": "Backend",
+        "description": "Node.js y NestJS 11 con TypeScript para la lógica de la aplicación y sus funcionalidades."
+      },
+      {
+        "title": "Persistencia y autenticación",
+        "description": "MySQL/MariaDB y TypeORM para persistencia, y JWT, Passport y bcrypt para autenticación."
+      },
+      {
+        "title": "Servicios y pruebas",
+        "description": "Multer y Sharp para imágenes; Nodemailer y SMTP para correo; Jest y Supertest para pruebas."
+      }
+    ],
+    "technologyGroups": [
+      {
+        "name": "Frontend",
+        "items": [
+          "React 19",
+          "TypeScript",
+          "CSS3",
+          "Vite",
+          "React Router",
+          "Axios"
+        ]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "NestJS 11", "TypeScript"]
+      },
+      {
+        "name": "Base de datos",
+        "items": ["MySQL/MariaDB"]
+      },
+      {
+        "name": "ORM y administración de datos",
+        "items": ["TypeORM", "phpMyAdmin"]
+      },
+      {
+        "name": "Autenticación",
+        "items": ["JWT", "Passport", "bcrypt"]
+      },
+      {
+        "name": "Procesamiento de imágenes",
+        "items": ["Multer", "Sharp"]
+      },
+      {
+        "name": "Correos electrónicos",
+        "items": ["Nodemailer", "SMTP"]
+      },
+      {
+        "name": "Pruebas",
+        "items": ["Jest", "Supertest"]
+      },
+      {
+        "name": "Control de versiones",
+        "items": ["Git"]
+      }
+    ],
+    "cover": {
+      "caption": "Inicio de la tienda",
+      "src": "projects/austral/portada.jpeg",
+      "alt": "Página principal de Austral con presentación de la marca y fotografía de productos de cuidado natural.",
+      "originalSrc": "projects/austral/portada.jpeg",
+      "height": 775,
+      "width": 1600
+    },
+    "gallery": [
+      {
+        "caption": "Colecciones en la página principal",
+        "src": "projects/austral/colecciones.jpeg",
+        "alt": "Sección de colecciones para cuidado capilar, kits, productos multipropósito y cuidado de la piel.",
+        "originalSrc": "projects/austral/colecciones.jpeg",
+        "height": 766,
+        "width": 1600
+      },
+      {
+        "caption": "Productos destacados",
+        "src": "projects/austral/productos-destacados.jpeg",
+        "alt": "Sección de productos destacados con tarjetas de kits y sus precios de catálogo.",
+        "originalSrc": "projects/austral/productos-destacados.jpeg",
+        "height": 771,
+        "width": 1600
+      },
+      {
+        "caption": "Catálogo y filtros de productos",
+        "src": "projects/austral/catalogo.jpeg",
+        "alt": "Catálogo de Austral con buscador, filtros por categoría y disponibilidad y selector de orden.",
+        "originalSrc": "projects/austral/catalogo.jpeg",
+        "height": 770,
+        "width": 1600
+      },
+      {
+        "caption": "Categorías de la tienda",
+        "src": "projects/austral/categorias.jpeg",
+        "alt": "Página de categorías con tarjetas para explorar las colecciones de productos.",
+        "originalSrc": "projects/austral/categorias.jpeg",
+        "height": 761,
+        "width": 1600
+      },
+      {
+        "caption": "Carrito de compras",
+        "src": "projects/austral/carrito.jpeg",
+        "alt": "Carrito con dos productos, controles de cantidad y resumen de la compra, sin información de clientes.",
+        "originalSrc": "projects/austral/carrito.jpeg",
+        "height": 774,
+        "width": 1600
+      },
+      {
+        "caption": "Inicio de sesión",
+        "src": "projects/austral/inicio-sesion.jpeg",
+        "alt": "Pantalla de acceso de Austral con campos de correo y contraseña vacíos y enlaces para recuperar acceso y crear cuenta.",
+        "originalSrc": "projects/austral/inicio-sesion.jpeg",
+        "height": 758,
+        "width": 1600
+      },
+      {
+        "caption": "Perfil de usuario · datos ficticios",
+        "src": "projects/austral/mi-perfil.jpeg",
+        "alt": "Vista de perfil con información de una cuenta ficticia de prueba.",
+        "originalSrc": "projects/austral/mi-perfil.jpeg",
+        "height": 751,
+        "width": 1600
+      },
+      {
+        "caption": "Historial de pedidos",
+        "src": "projects/austral/mis-pedidos.jpeg",
+        "alt": "Página Mis pedidos con tarjetas de pedidos, fechas y estados de seguimiento de una cuenta de prueba.",
+        "originalSrc": "projects/austral/mis-pedidos.jpeg",
+        "height": 750,
+        "width": 1600
+      },
+      {
+        "caption": "Panel administrativo · categorías",
+        "src": "projects/austral/administracion-categorias.jpeg",
+        "alt": "Vista administrativa de categorías con tarjetas y acciones de creación y edición, sin datos de clientes ni ventas.",
+        "originalSrc": "projects/austral/administracion-categorias.jpeg",
+        "height": 762,
+        "width": 1600
+      },
+      {
+        "caption": "Panel administrativo · pedidos",
+        "src": "projects/austral/administracion-pedidos.jpeg",
+        "alt": "Panel de gestión de pedidos con filtros por estado e información de usuarios ficticios de prueba.",
+        "originalSrc": "projects/austral/administracion-pedidos.jpeg",
+        "height": 770,
+        "width": 1600
+      },
+      {
+        "caption": "Panel administrativo · usuarios ficticios",
+        "src": "projects/austral/administracion-clientes.jpeg",
+        "alt": "Listado administrativo de clientes con cuentas, contactos e identificaciones ficticias de prueba.",
+        "originalSrc": "projects/austral/administracion-clientes.jpeg",
+        "height": 768,
+        "width": 1600
+      },
+      {
+        "caption": "Panel administrativo · inventario",
+        "src": "projects/austral/inventario.jpeg",
+        "alt": "Interfaz de inventario con controles de existencias y visibilidad de productos.",
+        "originalSrc": "projects/austral/inventario.jpeg",
+        "height": 768,
+        "width": 1600
+      },
+      {
+        "caption": "Sobre nosotros",
+        "src": "projects/austral/sobre-nosotros.jpeg",
+        "alt": "Página de presentación de Austral y sección de historia de la marca.",
+        "originalSrc": "projects/austral/sobre-nosotros.jpeg",
+        "height": 770,
+        "width": 1600
+      },
+      {
+        "caption": "Misión y visión",
+        "src": "projects/austral/mision-vision.jpeg",
+        "alt": "Tarjetas informativas de misión y visión de Austral.",
+        "originalSrc": "projects/austral/mision-vision.jpeg",
+        "height": 761,
+        "width": 1600
+      },
+      {
+        "caption": "Presentación institucional y footer",
+        "src": "projects/austral/cierre-institucional.jpeg",
+        "alt": "Cierre de la página institucional con acceso al catálogo y pie de página.",
+        "originalSrc": "projects/austral/cierre-institucional.jpeg",
+        "height": 766,
+        "width": 1600
+      },
+      {
+        "caption": "Presentación de ingredientes",
+        "src": "projects/austral/presentacion-ingredientes.jpeg",
+        "alt": "Página sobre ingredientes con navegación por extractos botánicos.",
+        "originalSrc": "projects/austral/presentacion-ingredientes.jpeg",
+        "height": 760,
+        "width": 1600
+      },
+      {
+        "caption": "Contenido de ingredientes",
+        "src": "projects/austral/ingredientes.jpeg",
+        "alt": "Sección informativa de la tienda con presentación visual del romero y la caléndula.",
+        "originalSrc": "projects/austral/ingredientes.jpeg",
+        "height": 763,
+        "width": 1600
+      },
+      {
+        "caption": "Preguntas frecuentes",
+        "src": "projects/austral/preguntas-frecuentes.jpeg",
+        "alt": "Interfaz de preguntas frecuentes de la tienda con una lista de preguntas desplegables.",
+        "originalSrc": "projects/austral/preguntas-frecuentes.jpeg",
+        "height": 771,
+        "width": 1600
+      },
+      {
+        "caption": "Interfaz de política de privacidad",
+        "src": "projects/austral/privacidad.jpeg",
+        "alt": "Página de política de privacidad de la tienda con navegación entre páginas informativas.",
+        "originalSrc": "projects/austral/privacidad.jpeg",
+        "height": 768,
+        "width": 1600
+      },
+      {
+        "caption": "Interfaz de términos y condiciones",
+        "src": "projects/austral/terminos-condiciones.jpeg",
+        "alt": "Página informativa de términos y condiciones de compra de Austral.",
+        "originalSrc": "projects/austral/terminos-condiciones.jpeg",
+        "height": 757,
+        "width": 1600
+      },
+      {
+        "caption": "Interfaz de envíos y cambios",
+        "src": "projects/austral/envios-cambios.jpeg",
+        "alt": "Página de información sobre tiempos de envío, cambios y devoluciones.",
+        "originalSrc": "projects/austral/envios-cambios.jpeg",
+        "height": 763,
+        "width": 1600
+      },
+      {
+        "caption": "Footer de la tienda",
+        "src": "projects/austral/footer.jpeg",
+        "alt": "Pie de página de Austral con navegación, información comercial de contacto y enlaces informativos.",
+        "originalSrc": "projects/austral/footer.jpeg",
+        "height": 766,
+        "width": 1600
+      }
+    ]
+  },
+  {
+    "id": "contrasena",
+    "title": "ContraSENA · Sistema de Gestión de Contratos y Nómina",
+    "category": "Desktop App",
+    "platform": "Windows",
+    "collaborative": false,
+    "participationLabel": "Desarrollo individual",
+    "contributionTitle": "Mi participación como desarrollador",
+    "noteTitle": "Desarrollo individual para un tercero",
+    "description": "Desarrollo individual de una aplicación de escritorio para Windows orientada a la administración de contratos, nómina, pagos y seguridad social, utilizando Electron, Node.js, Express y MySQL.",
+    "overview": "Aplicación de escritorio desarrollada individualmente desde cero para centralizar y facilitar la administración de contratos, nómina, pagos y seguridad social. Integra diferentes procesos administrativos en una sola herramienta, con una interfaz construida con tecnologías web y ejecutada como software de escritorio mediante Electron.",
+    "objective": "Centralizar la gestión de contratos, nómina, pagos y seguridad social en una aplicación de escritorio para Windows.",
+    "problem": "La administración de contratos, nómina, pagos y seguridad social requiere consultar y relacionar información de distintos procesos. La aplicación busca reunir esa gestión en una sola herramienta de escritorio.",
+    "contributions": [
+      "Análisis de requerimientos.",
+      "Diseño e implementación de interfaces con JavaScript, HTML5 y CSS3.",
+      "Implementación de funcionalidades y desarrollo del backend con Node.js y Express.js.",
+      "Integración con MySQL mediante mysql2.",
+      "Realización de pruebas con Node.js Test Runner.",
+      "Preparación del instalador para Windows con NSIS y PowerShell."
+    ],
+    "features": [
+      "Administración de contratos.",
+      "Gestión de nómina y pagos.",
+      "Gestión de seguridad social.",
+      "Centralización de procesos administrativos en una aplicación de escritorio."
+    ],
+    "collaborationNote": "Software desarrollado individualmente para un tercero. Mi participación abarcó el desarrollo de la aplicación; no me presento como propietario de los derechos del producto. El nombre, la descripción y las capturas se comparten con autorización. Los registros, identificaciones e importes visibles son datos ficticios de prueba, según confirmación del titular del portafolio.",
+    "technologies": [
+      "Electron",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MySQL"
+    ],
+    "additionalTechnologies": [],
+    "architecture": [
+      {
+        "title": "Aplicación de escritorio",
+        "description": "Electron permite ejecutar una aplicación de escritorio construida con tecnologías web. La interfaz utiliza JavaScript, HTML5 y CSS3 y se ejecuta en Windows."
+      },
+      {
+        "title": "Backend y lógica",
+        "description": "Node.js y Express.js para implementar la lógica de la aplicación y relacionar los procesos administrativos."
+      },
+      {
+        "title": "Persistencia",
+        "description": "MySQL como base de datos y mysql2 para su integración con el backend."
+      },
+      {
+        "title": "Configuración, pruebas y distribución",
+        "description": "dotenv para configuración, Node.js Test Runner para pruebas y NSIS y PowerShell para preparar el instalador de Windows."
+      }
+    ],
+    "technologyGroups": [
+      {
+        "name": "Aplicación de escritorio",
+        "items": ["Electron", "JavaScript", "HTML5", "CSS3"]
+      },
+      {
+        "name": "Backend y lógica",
+        "items": ["Node.js", "Express.js", "mysql2"]
+      },
+      {
+        "name": "Base de datos",
+        "items": ["MySQL"]
+      },
+      {
+        "name": "Configuración y distribución",
+        "items": ["dotenv", "NSIS", "PowerShell"]
+      },
+      {
+        "name": "Pruebas",
+        "items": ["Node.js Test Runner"]
+      },
+      {
+        "name": "Control de versiones",
+        "items": ["Git", "GitHub"]
+      },
+      {
+        "name": "Recursos gráficos",
+        "items": ["SVG"]
+      }
+    ],
+    "cover": {
+      "caption": "Acceso a la aplicación de escritorio",
+      "src": "projects/contrasena/portada.jpeg",
+      "alt": "Pantalla de inicio de sesión de la aplicación Windows, con campos vacíos y sin credenciales.",
+      "originalSrc": "projects/contrasena/portada.jpeg",
+      "height": 773,
+      "width": 1163
+    },
+    "gallery": [
+      {
+        "caption": "Panel de control · datos de prueba",
+        "src": "projects/contrasena/panel-control.jpeg",
+        "alt": "Panel de control con indicadores contractuales y accesos a módulos, utilizando datos ficticios de prueba.",
+        "originalSrc": "projects/contrasena/panel-control.jpeg",
+        "height": 857,
+        "width": 1600
+      },
+      {
+        "caption": "Honorarios y pagos · datos de prueba",
+        "src": "projects/contrasena/honorarios.jpeg",
+        "alt": "Interfaz de honorarios con filtros por período y estado, y un registro ficticio de pago.",
+        "originalSrc": "projects/contrasena/honorarios.jpeg",
+        "height": 861,
+        "width": 1600
+      },
+      {
+        "caption": "Seguridad social · vista sin registros",
+        "src": "projects/contrasena/seguridad-social.jpeg",
+        "alt": "Interfaz de seguridad social con filtros y estado sin aportes registrados.",
+        "originalSrc": "projects/contrasena/seguridad-social.jpeg",
+        "height": 861,
+        "width": 1600
+      },
+      {
+        "caption": "Administración de sedes · datos de prueba",
+        "src": "projects/contrasena/sedes.jpeg",
+        "alt": "Módulo de administración de sedes con filtros y un registro de prueba.",
+        "originalSrc": "projects/contrasena/sedes.jpeg",
+        "height": 856,
+        "width": 1600
+      },
+      {
+        "caption": "Contratistas · datos de prueba",
+        "src": "projects/contrasena/contratistas.jpeg",
+        "alt": "Listado de contratistas con búsqueda y acceso a perfiles, con identificación ficticia de prueba.",
+        "originalSrc": "projects/contrasena/contratistas.jpeg",
+        "height": 860,
+        "width": 1600
+      },
+      {
+        "caption": "Novedades contractuales · datos de prueba",
+        "src": "projects/contrasena/novedades.jpeg",
+        "alt": "Módulo de novedades contractuales con filtros y una solicitud de adición de valor ficticia.",
+        "originalSrc": "projects/contrasena/novedades.jpeg",
+        "height": 856,
+        "width": 1600
+      },
+      {
+        "caption": "Solicitudes de cuenta · sin contrato seleccionado",
+        "src": "projects/contrasena/solicitudes-cuenta.jpeg",
+        "alt": "Interfaz de cambios de cuenta bancaria sin contrato seleccionado ni cuenta bancaria visible.",
+        "originalSrc": "projects/contrasena/solicitudes-cuenta.jpeg",
+        "height": 857,
+        "width": 1600
+      },
+      {
+        "caption": "Informes y analítica · datos de prueba",
+        "src": "projects/contrasena/informes.jpeg",
+        "alt": "Panel de informes con filtros por año y sede e indicadores económicos basados en datos ficticios.",
+        "originalSrc": "projects/contrasena/informes.jpeg",
+        "height": 874,
+        "width": 1600
+      },
+      {
+        "caption": "Gestión de cuenta · datos de prueba",
+        "src": "projects/contrasena/mi-cuenta.jpeg",
+        "alt": "Cuadro de gestión de cuenta con campos de contraseña vacíos, sobre un panel con datos ficticios.",
+        "originalSrc": "projects/contrasena/mi-cuenta.jpeg",
+        "height": 859,
+        "width": 1600
+      }
+    ]
+  }
+]

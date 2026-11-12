@@ -359,11 +359,6 @@ export function ProjectCard({ project }: { project: Project }) {
         <Screenshot image={project.cover} />
       </div>
       <div className="project-showcase-body">
-        {project.previewOnly && (
-          <p className="project-preview-notice">
-            Vista local · pendiente de autorización pública
-          </p>
-        )}
         <ProjectBadges project={project} />
         <h3>{project.title}</h3>
         <p>{project.description}</p>

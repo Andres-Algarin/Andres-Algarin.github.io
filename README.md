@@ -1,61 +1,52 @@
 ﻿# Portafolio de Andrés Felipe Algarín Cardona
 
-Portafolio personal con React, TypeScript y Vite. Diseño responsive en carbón y esmeralda, iconos de lucide-react y CSS sin frameworks. No contiene proyectos ficticios ni información confidencial.
+Portafolio en React, TypeScript y Vite, con diseño responsive carbón y esmeralda, iconos de lucide-react y CSS sin frameworks.
 
-## Desarrollo
+## Desarrollo y comprobaciones
 
 ```sh
 npm ci
 npm run dev
-```
-
-## Comprobaciones
-
-```sh
 npm run lint
 npm run build
+node --test scripts/projects.test.mjs
 npm run preview
 ```
 
-La compilación comprueba TypeScript y genera los archivos estáticos en `dist/`.
+`npm run dev` muestra los tres proyectos en localhost. `npm run preview` permite revisar exactamente la compilación pública de `dist/`. Después de cambiar la configuración de Vite, reinicia el servidor.
+
+## Proyectos autorizados
+
+Se confirmó autorización para mostrar públicamente los nombres, las descripciones y las capturas seleccionadas de FERREINVER, Austral y ContraSENA. No hay enlaces al código fuente ni demos de los proyectos.
+
+- FERREINVER: contribución frontend en equipo, limitada a landing page, interfaz visual del carrito, contacto y footer; nueve capturas.
+- Austral: desarrollo individual Full Stack para su titular; 23 capturas autorizadas, incluida la nueva pantalla de inicio de sesión. Los usuarios visibles son ficticios de prueba; se omite la captura de Productos del panel administrativo. Desarrollo funcional pendiente de publicación en su dominio.
+- ContraSENA: desarrollo individual de una aplicación de escritorio para Windows; diez capturas. El usuario confirmó que los registros, identificaciones e importes visibles son ficticios de prueba.
+
+La participación técnica no se presenta como titularidad de los derechos de productos desarrollados para terceros. No se agregaron interfaces ficticias ni funcionalidades no suministradas.
 
 ## Organización
 
-- `src/App.tsx`: secciones, navegación responsive y componentes reutilizables.
-- `src/App.css`: composición, componentes, estados y breakpoints.
-- `src/index.css`: estilos globales, tipografía, accesibilidad y movimiento reducido.
-- `src/data/projects.ts`: datos tipados del proyecto colaborativo y sus capturas autorizadas.
-- `index.html`: idioma español y metadatos SEO/sociales.
-- `public/favicon.svg`: identidad visual del sitio.
+- `src/data/projects.ts`: tipos, contenido de FERREINVER y composición de los tres proyectos públicos.
+- `src/data/additional-projects.json`: textos y metadatos autorizados de Austral y ContraSENA.
+- `src/data/project-images.json`: metadatos de las capturas de FERREINVER.
+- `src/components/Projects.tsx` y `Projects.css`: tarjetas, detalles y galería reutilizables, con teclado, Escape, ampliación y carga diferida.
+- `public/projects/ferreinver/`, `public/projects/austral/` y `public/projects/contrasena/`: capturas públicas seleccionadas.
+- `src/App.tsx`, `src/App.css` y `src/index.css`: secciones y estilos del portafolio.
+- `scripts/projects.test.mjs`: integridad de los archivos de producción y comprobación HTTP de las imágenes.
 
-## Agregar proyectos
+Se conservaron las dimensiones y los JPEG recibidos. En las comparaciones realizadas, WebP sin pérdida resultó más pesado que los originales, por lo que se usan los JPEG sin recomprimir. La ampliación utiliza el original recibido y no aumenta artificialmente su detalle.
 
-Los datos de FERREINVER están en `src/data/projects.ts`. La tarjeta, los detalles y la galería reutilizables están en `src/components/Projects.tsx`, con estilos en `Projects.css`. Cada proyecto distingue la contribución propia y las tecnologías del equipo. Publica exclusivamente trabajos propios o expresamente autorizados. Las instrucciones para incorporar las nueve capturas originales y optimizarlas sin pérdida están en `public/projects/ferreinver/README.md`.
+## Privacidad
 
-## GitHub Pages (preparado, sin desplegar)
+La aplicación ya no depende de módulos virtuales ni de `.private/`. Funciona igual en desarrollo y producción con los tres proyectos públicos. Los originales adicionales, borradores y scripts históricos de revisión permanecen en `.private/`, ignorada por Git y bloqueada por Vite. No son necesarios para compilar ni ejecutar el portafolio. No uses `git add -f` sobre esa carpeta ni copies capturas adicionales a public sin revisarlas.
 
-`vite.config.ts` usa `base: './'` para generar rutas relativas compatibles con Pages tanto en un dominio de usuario como en una subruta de repositorio. La página usa anclas y no requiere reescritura de rutas.
+## GitHub Pages
 
-Cuando se autorice el despliegue, GitHub Pages debe publicar el contenido generado en `dist/`, no los archivos fuente. Se puede configurar posteriormente un workflow manual de GitHub Actions que ejecute `npm ci`, `npm run lint`, `npm run build` y publique ese directorio. No se incluye un workflow que despliegue automáticamente al hacer push.
+`vite.config.ts` usa `base: './'` para generar rutas relativas compatibles con Pages tanto en un dominio de usuario como en una subruta. La navegación usa anclas y no requiere reescritura de rutas. El resultado estático está en `dist/`.
 
-No se ha realizado push, publicación ni cambio en la configuración remota.
+No se configuró despliegue automático ni se hizo push o despliegue. Para revisar la versión final, compila y ejecuta `npm run preview`; usa la URL que indique Vite.
 
 ## Notas
 
-Las tipografías DM Sans y Manrope se cargan desde Google Fonts; el sitio usa fuentes de sistema si no hay conexión. El correo abre el cliente de correo del visitante; no hay formulario ni backend. Los enlaces a GitHub y LinkedIn abren una pestaña nueva de forma segura. La sección de proyectos no consulta ni expone repositorios automáticamente.
-
-## Vistas locales de proyectos sin autorización pública
-
-Los textos y las capturas de revisiones privadas se guardan exclusivamente en `.private/`, ignorada por Git. No deben ponerse en `public/`. El servidor de desarrollo sirve únicamente las imágenes seleccionadas en `.private/projects.json`, con acceso restringido a loopback. No sirve el resto de los archivos privados.
-
-Para revisarlas, ejecuta `npm run dev`, abre la URL local que indique Vite y entra en Proyectos → Ver detalles. Reinicia el servidor después de cambiar los datos de `.private/projects.json`. Los cuadros de diálogo y la galería se reutilizan para proyectos individuales y de equipo.
-
-`npm run build` no lee ni importa los datos privados, incluso usando un modo de desarrollo. `npm run preview` sirve únicamente el resultado público generado. Los clones del repositorio funcionan sin `.private/` y muestran los proyectos públicos.
-
-Después de compilar, las comprobaciones de aislamiento se ejecutan con:
-
-```sh
-node --test scripts/local-preview.test.mjs
-```
-
-Las pruebas privadas se omiten cuando no existen datos locales. La carpeta privada contiene la información para revisar sus capturas; mantén los archivos originales y excluye cualquier captura con datos personales, credenciales, clientes, ventas o existencias internas hasta disponer de una versión adecuada y autorización.
+Las tipografías DM Sans y Manrope se cargan desde Google Fonts con alternativas de sistema. Los enlaces de correo, WhatsApp, Instagram, LinkedIn y perfil de GitHub abren sus destinos; no hay formulario ni backend en el portafolio. Los repositorios privados nunca se consultan ni exponen automáticamente.
