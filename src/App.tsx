@@ -15,6 +15,8 @@ import {
   Layers3,
   ContactRound as Linkedin,
   Mail,
+  MessageCircle,
+  Camera,
   MapPin,
   Menu,
   Monitor,
@@ -25,6 +27,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import "./App.css";
 import { projects } from "./data/projects";
+import { ProjectCard } from "./components/Projects";
 
 const currentYear = new Date().getFullYear();
 const links = [
@@ -35,6 +38,8 @@ const links = [
 ];
 const social = {
   email: "mailto:andresf.algarin@gmail.com",
+  whatsapp: "https://wa.me/573133637433",
+  instagram: "https://www.instagram.com/algarin117/",
   github: "https://github.com/Andres-Algarin",
   linkedin: "https://www.linkedin.com/in/andr%C3%A9s-algar%C3%ADn-124849390/",
 };
@@ -42,14 +47,7 @@ const stack: { name: string; icon: LucideIcon; items: string[] }[] = [
   {
     name: "Frontend",
     icon: Code2,
-    items: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Bootstrap",
-    ],
+    items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
   },
   {
     name: "Backend",
@@ -443,33 +441,16 @@ function App() {
             <SectionHeading
               number="05"
               label="PROYECTOS"
-              title="Espacio para lo que viene."
-              description="Una selección de trabajos propios o con autorización para compartir, cuando estén disponibles."
+              title={
+                projects.length
+                  ? "Interfaces que toman forma."
+                  : "Espacio para lo que viene."
+              }
+              description="Trabajos propios y colaborativos compartidos con autorización, con el alcance de mi contribución en cada proyecto."
             />
             <div className="projects-grid">
               {projects.map((project) => (
-                <article className="project-card" key={project.title}>
-                  <FolderCode size={26} aria-hidden="true" />
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="tags">
-                    {project.technologies.map((technology) => (
-                      <span key={technology}>{technology}</span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    {project.repositoryUrl && (
-                      <SocialLink href={project.repositoryUrl} icon={Github}>
-                        Código
-                      </SocialLink>
-                    )}
-                    {project.demoUrl && (
-                      <SocialLink href={project.demoUrl} icon={ExternalLink}>
-                        Ver proyecto
-                      </SocialLink>
-                    )}
-                  </div>
-                </article>
+                <ProjectCard key={project.id} project={project} />
               ))}
             </div>
             {projects.length === 0 && (
@@ -521,6 +502,12 @@ function App() {
           <div className="contact-links">
             <SocialLink href={social.email} icon={Mail}>
               Envíame un correo
+            </SocialLink>
+            <SocialLink href={social.whatsapp} icon={MessageCircle}>
+              WhatsApp · +57 313 363 7433
+            </SocialLink>
+            <SocialLink href={social.instagram} icon={Camera}>
+              Instagram · @algarin117
             </SocialLink>
             <SocialLink href={social.linkedin} icon={Linkedin}>
               Conectemos en LinkedIn

@@ -1,0 +1,47 @@
+﻿{
+  "landing": {
+    "width": 1600,
+    "file": "landing.jpeg",
+    "height": 758
+  },
+  "proceso": {
+    "width": 1600,
+    "file": "proceso.jpeg",
+    "height": 760
+  },
+  "tipos-invernaderos": {
+    "width": 1600,
+    "file": "tipos-invernaderos.jpeg",
+    "height": 756
+  },
+  "productos-footer": {
+    "width": 1600,
+    "file": "productos-footer.jpeg",
+    "height": 744
+  },
+  "contacto": {
+    "width": 1600,
+    "file": "contacto.jpeg",
+    "height": 772
+  },
+  "ubicacion-footer": {
+    "width": 1600,
+    "file": "ubicacion-footer.jpeg",
+    "height": 755
+  },
+  "sobre-nosotros": {
+    "width": 1600,
+    "file": "sobre-nosotros.jpeg",
+    "height": 763
+  },
+  "objetivos": {
+    "width": 1600,
+    "file": "objetivos.jpeg",
+    "height": 757
+  },
+  "alcance-footer": {
+    "width": 1600,
+    "file": "alcance-footer.jpeg",
+    "height": 745
+  }
+}
