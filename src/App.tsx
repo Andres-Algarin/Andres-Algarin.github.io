@@ -317,15 +317,18 @@ function App() {
             <p>
               Soy Andrés,{" "}
               <strong>Desarrollador de Software Full Stack Junior</strong> en
-              Marinilla, Antioquia. Me interesa entender los problemas y
-              convertirlos en soluciones digitales claras, funcionales y fáciles
-              de usar.
+              Marinilla, Antioquia. Me interesa comprender problemas reales y
+              transformarlos en soluciones digitales funcionales y fáciles de usar.
             </p>
             <p>
-              He desarrollado aplicaciones web y de escritorio desde cero, desde
-              el levantamiento de requerimientos hasta la implementación de APIs
-              REST y la integración de bases de datos. Disfruto conectar cada
-              parte del proceso y resolver los retos técnicos del camino.
+              Durante mi experiencia en TecnoParque Rionegro – SENA he desarrollado
+              aplicaciones web y de escritorio desde cero, participando en el
+              análisis de requerimientos, desarrollo de APIs REST e integración de
+              bases de datos.
+            </p>
+            <p>
+              Me motiva aprender nuevas tecnologías, resolver desafíos técnicos y
+              crear software que aporte valor a sus usuarios.
             </p>
             <div className="about-notes">
               <span>

@@ -108,22 +108,6 @@
     },
     "gallery": [
       {
-        "caption": "Colecciones en la página principal",
-        "src": "projects/austral/colecciones.jpeg",
-        "alt": "Sección de colecciones para cuidado capilar, kits, productos multipropósito y cuidado de la piel.",
-        "originalSrc": "projects/austral/colecciones.jpeg",
-        "height": 766,
-        "width": 1600
-      },
-      {
-        "caption": "Productos destacados",
-        "src": "projects/austral/productos-destacados.jpeg",
-        "alt": "Sección de productos destacados con tarjetas de kits y sus precios de catálogo.",
-        "originalSrc": "projects/austral/productos-destacados.jpeg",
-        "height": 771,
-        "width": 1600
-      },
-      {
         "caption": "Catálogo y filtros de productos",
         "src": "projects/austral/catalogo.jpeg",
         "alt": "Catálogo de Austral con buscador, filtros por categoría y disponibilidad y selector de orden.",
@@ -156,22 +140,6 @@
         "width": 1600
       },
       {
-        "caption": "Perfil de usuario · datos ficticios",
-        "src": "projects/austral/mi-perfil.jpeg",
-        "alt": "Vista de perfil con información de una cuenta ficticia de prueba.",
-        "originalSrc": "projects/austral/mi-perfil.jpeg",
-        "height": 751,
-        "width": 1600
-      },
-      {
-        "caption": "Historial de pedidos",
-        "src": "projects/austral/mis-pedidos.jpeg",
-        "alt": "Página Mis pedidos con tarjetas de pedidos, fechas y estados de seguimiento de una cuenta de prueba.",
-        "originalSrc": "projects/austral/mis-pedidos.jpeg",
-        "height": 750,
-        "width": 1600
-      },
-      {
         "caption": "Panel administrativo · categorías",
         "src": "projects/austral/administracion-categorias.jpeg",
         "alt": "Vista administrativa de categorías con tarjetas y acciones de creación y edición, sin datos de clientes ni ventas.",
@@ -188,18 +156,50 @@
         "width": 1600
       },
       {
-        "caption": "Panel administrativo · usuarios ficticios",
-        "src": "projects/austral/administracion-clientes.jpeg",
-        "alt": "Listado administrativo de clientes con cuentas, contactos e identificaciones ficticias de prueba.",
-        "originalSrc": "projects/austral/administracion-clientes.jpeg",
-        "height": 768,
-        "width": 1600
-      },
-      {
         "caption": "Panel administrativo · inventario",
         "src": "projects/austral/inventario.jpeg",
         "alt": "Interfaz de inventario con controles de existencias y visibilidad de productos.",
         "originalSrc": "projects/austral/inventario.jpeg",
+        "height": 768,
+        "width": 1600
+      },
+      {
+        "caption": "Colecciones en la página principal",
+        "src": "projects/austral/colecciones.jpeg",
+        "alt": "Sección de colecciones para cuidado capilar, kits, productos multipropósito y cuidado de la piel.",
+        "originalSrc": "projects/austral/colecciones.jpeg",
+        "height": 766,
+        "width": 1600
+      },
+      {
+        "caption": "Productos destacados",
+        "src": "projects/austral/productos-destacados.jpeg",
+        "alt": "Sección de productos destacados con tarjetas de kits y sus precios de catálogo.",
+        "originalSrc": "projects/austral/productos-destacados.jpeg",
+        "height": 771,
+        "width": 1600
+      },
+      {
+        "caption": "Perfil de usuario · datos ficticios",
+        "src": "projects/austral/mi-perfil.jpeg",
+        "alt": "Vista de perfil con información de una cuenta ficticia de prueba.",
+        "originalSrc": "projects/austral/mi-perfil.jpeg",
+        "height": 751,
+        "width": 1600
+      },
+      {
+        "caption": "Historial de pedidos",
+        "src": "projects/austral/mis-pedidos.jpeg",
+        "alt": "Página Mis pedidos con tarjetas de pedidos, fechas y estados de seguimiento de una cuenta de prueba.",
+        "originalSrc": "projects/austral/mis-pedidos.jpeg",
+        "height": 750,
+        "width": 1600
+      },
+      {
+        "caption": "Panel administrativo · usuarios ficticios",
+        "src": "projects/austral/administracion-clientes.jpeg",
+        "alt": "Listado administrativo de clientes con cuentas, contactos e identificaciones ficticias de prueba.",
+        "originalSrc": "projects/austral/administracion-clientes.jpeg",
         "height": 768,
         "width": 1600
       },
@@ -287,7 +287,7 @@
   },
   {
     "id": "contrasena",
-    "title": "ContraSENA · Sistema de Gestión de Contratos y Nómina",
+    "title": "ContraSENA",
     "category": "Desktop App",
     "platform": "Windows",
     "collaborative": false,
@@ -370,21 +370,21 @@
       }
     ],
     "cover": {
-      "caption": "Acceso a la aplicación de escritorio",
-      "src": "projects/contrasena/portada.jpeg",
-      "alt": "Pantalla de inicio de sesión de la aplicación Windows, con campos vacíos y sin credenciales.",
-      "originalSrc": "projects/contrasena/portada.jpeg",
-      "height": 773,
-      "width": 1163
+      "caption": "Panel de control · datos de prueba",
+      "src": "projects/contrasena/panel-control.jpeg",
+      "alt": "Panel de control con indicadores contractuales y accesos a módulos, utilizando datos ficticios de prueba.",
+      "originalSrc": "projects/contrasena/panel-control.jpeg",
+      "height": 857,
+      "width": 1600
     },
     "gallery": [
       {
-        "caption": "Panel de control · datos de prueba",
-        "src": "projects/contrasena/panel-control.jpeg",
-        "alt": "Panel de control con indicadores contractuales y accesos a módulos, utilizando datos ficticios de prueba.",
-        "originalSrc": "projects/contrasena/panel-control.jpeg",
-        "height": 857,
-        "width": 1600
+        "caption": "Acceso a la aplicación de escritorio",
+        "src": "projects/contrasena/portada.jpeg",
+        "alt": "Pantalla de inicio de sesión de la aplicación Windows, con campos vacíos y sin credenciales.",
+        "originalSrc": "projects/contrasena/portada.jpeg",
+        "height": 773,
+        "width": 1163
       },
       {
         "caption": "Honorarios y pagos · datos de prueba",
@@ -450,6 +450,7 @@
         "height": 859,
         "width": 1600
       }
-    ]
+    ],
+    "subtitle": "Sistema de gestión administrativa"
   }
 ]

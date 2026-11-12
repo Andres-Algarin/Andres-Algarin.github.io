@@ -13,6 +13,7 @@ export type ProjectImage = {
 export type Project = {
   id: string;
   title: string;
+  subtitle?: string;
   category: string;
   collaborative: boolean;
   participationLabel?: string;

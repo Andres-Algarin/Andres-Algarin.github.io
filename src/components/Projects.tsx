@@ -112,6 +112,10 @@ function Screenshot({
 }
 
 function Gallery({ images }: { images: ProjectImage[] }) {
+  const [showAll, setShowAll] = useState(false);
+  const galleryId = useId();
+  const initialCount = 8;
+  const visibleImages = showAll ? images : images.slice(0, initialCount);
   const [selected, setSelected] = useState<number | null>(null);
   const [zoomed, setZoomed] = useState(false);
   const current = selected === null ? null : images[selected];
@@ -125,8 +129,26 @@ function Gallery({ images }: { images: ProjectImage[] }) {
   };
   return (
     <>
-      <div className="project-gallery">
-        {images.map((image, index) => (
+      <div className="project-gallery-toolbar">
+        <p aria-live="polite">
+          Mostrando {visibleImages.length} de {images.length} capturas
+        </p>
+        {images.length > initialCount && (
+          <button
+            type="button"
+            className="project-control"
+            aria-expanded={showAll}
+            aria-controls={galleryId}
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll
+              ? "Mostrar selección"
+              : `Ver todas las capturas (${images.length})`}
+          </button>
+        )}
+      </div>
+      <div className="project-gallery" id={galleryId}>
+        {visibleImages.map((image, index) => (
           <figure key={image.src}>
             <button
               type="button"
@@ -237,6 +259,9 @@ function ProjectDetails({
         <Screenshot image={project.cover} loading="eager" />
       </div>
       <div className="project-details-body">
+        {project.subtitle && (
+          <p className="project-subtitle">{project.subtitle}</p>
+        )}
         <ProjectBadges project={project} />
         {project.status && <p className="project-status">{project.status}</p>}
         {project.platform && (
@@ -361,6 +386,9 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="project-showcase-body">
         <ProjectBadges project={project} />
         <h3>{project.title}</h3>
+        {project.subtitle && (
+          <p className="project-subtitle">{project.subtitle}</p>
+        )}
         <p>{project.description}</p>
         <div className="tags">
           {project.technologies.map((technology) => (

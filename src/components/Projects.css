@@ -11,6 +11,7 @@
   border-color: #507a5f;
 }
 .project-showcase-cover {
+  padding: 18px;
   background: #0a100c;
   display: grid;
   align-content: center;
@@ -25,7 +26,9 @@
   object-fit: contain;
 }
 .project-showcase-body {
-  padding: 32px;
+  padding: clamp(26px, 3vw, 38px);
+  align-self: center;
+  min-width: 0;
 }
 .project-badges {
   display: flex;
@@ -43,15 +46,16 @@
   padding: 6px 9px;
   font-size: 10px;
 }
-.project-showcase h3 {
+.project-showcase-body > h3 {
   margin-top: 20px;
-  font-size: 27px;
+  font-size: clamp(25px, 2.4vw, 32px);
+  line-height: 1.25;
   letter-spacing: -0.8px;
 }
 .project-showcase-body > p {
-  font-size: 13px;
-  color: #a6b4ab;
-  line-height: 1.9;
+  font-size: 14px;
+  color: #b2bfb7;
+  line-height: 1.85;
   margin-top: 15px;
 }
 .project-showcase-actions {
@@ -218,8 +222,8 @@
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 18px;
-  margin-top: 22px;
+  gap: 26px 20px;
+  margin-top: 18px;
 }
 .project-gallery figure {
   margin: 0;
@@ -238,7 +242,7 @@
 .project-gallery-button img {
   width: 100%;
   height: auto;
-  aspect-ratio: 2.1;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   display: block;
   transition: opacity 0.2s;
@@ -247,18 +251,15 @@
   opacity: 0.8;
 }
 .project-image-expand {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 6px;
-  padding: 7px 9px;
+  padding: 10px;
   font-size: 10px;
   color: #e1f7e9;
   background: #0b170fe8;
-  border: 1px solid #50785e;
-  border-radius: 5px;
+  border-top: 1px solid #345040;
 }
 .project-gallery figcaption {
   font-size: 11px;
@@ -436,4 +437,42 @@
 /* Keep each showcase as a readable full-width case study. */
 .projects-grid:has(> .project-showcase) {
   grid-template-columns: 1fr;
+  gap: clamp(24px, 3vw, 36px);
+}
+
+.project-showcase-cover img {
+  border-radius: 6px;
+  box-shadow: 0 8px 26px #0003;
+}
+.project-showcase-body > .project-subtitle,
+.project-details-body > .project-subtitle {
+  margin: 9px 0 0;
+  color: #b0dac0;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.project-gallery-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  margin-top: 24px;
+}
+.project-gallery-toolbar p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #9fb8a7;
+}
+@media (max-width: 600px) {
+  .project-showcase-cover {
+    padding: 12px;
+  }
+  .project-gallery-toolbar .project-control {
+    width: 100%;
+  }
+  .project-gallery-button img {
+    aspect-ratio: auto;
+  }
 }
