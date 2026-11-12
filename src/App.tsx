@@ -49,20 +49,23 @@ const stack: { name: string; icon: LucideIcon; items: string[] }[] = [
       "HTML5",
       "CSS3",
       "Bootstrap",
-      "Vite",
     ],
   },
-  { name: "Backend", icon: Terminal, items: ["Node.js", "NestJS", "Express"] },
+  {
+    name: "Backend",
+    icon: Terminal,
+    items: ["Node.js", "NestJS", "Express.js", "PHP", "Laravel"],
+  },
   {
     name: "Bases de datos",
     icon: Database,
-    items: ["MySQL", "MariaDB", "TypeORM"],
+    items: ["MySQL", "MariaDB"],
   },
   { name: "Escritorio", icon: Monitor, items: ["Electron"] },
   {
     name: "Herramientas y testing",
     icon: GitBranch,
-    items: ["Git", "GitHub", "Jest", "Supertest"],
+    items: ["Git", "GitHub", "Vite", "TypeORM (ORM)", "Jest", "Supertest"],
   },
   {
     name: "Seguridad",
