@@ -426,7 +426,7 @@ function App() {
             <article>
               <GraduationCap />
               <div>
-                <span className="eyebrow">SENA</span>
+                <span className="eyebrow">SENA · 2023–2024</span>
                 <h3>Técnico en Sistemas</h3>
               </div>
             </article>
