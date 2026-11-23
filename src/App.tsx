@@ -205,7 +205,7 @@ function App() {
               en <span>software.</span>
             </h1>
             <p className="hero-description">
-              Andrés Felipe Algarín Cardona.
+              Andrés Felipe Algarín Cárdenas.
               <br />
               Desarrollo experiencias web y de escritorio, conectando
               interfaces, lógica y datos con propósito.
